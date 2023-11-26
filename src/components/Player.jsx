@@ -24,7 +24,7 @@ export function Player({ defaultName, symbol }) {
     <li>
       <span className={style.player}>
         {inputPlayerName}
-        <span className={style.playerSymbol}>{symbol}</span>
+        <span className={style.playerSymbol}><b>{symbol}</b></span>
       </span>
       <button onClick={handleEdit}> {edit? "Save" : "Edit"} </button>
     </li>

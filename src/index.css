@@ -11,3 +11,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+main{
+
+  height: 100vh;
+  background-image: linear-gradient(antiquewhite, rgb(166, 164, 160));
+}
+
+.playerInfoGameBoard{
+  width: 50%;
+  margin: auto;
+  border: 5px outset rgb(90, 87, 87);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(181, 178, 175);
+  padding: 20px;
+  border-radius: 20px;
+  
+  }
+  #players{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 80px;
+    font-size: 2rem;
+  }
