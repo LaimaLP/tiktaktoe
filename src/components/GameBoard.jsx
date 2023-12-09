@@ -1,5 +1,4 @@
 import style from "./Header.module.css";
-import { useState } from "react";
 
 const initialGameBoard = [
   [null, null, null],
@@ -7,19 +6,29 @@ const initialGameBoard = [
   [null, null, null],
 ];
 
-export function GameBoard({ onSelectSq, activePlayerSymbol }) {
-  const [gameBoard, setGameBoard] = useState(initialGameBoard);
+export function GameBoard({ onSelectSq, turns }) {
 
-  function handleSelectSq(rowIdx, colIdx) {
-    setGameBoard((prevGameBoard) => {
-      const updatedBoard = [
-        ...prevGameBoard.map((innerArray) => [...innerArray]),
-      ];
-      updatedBoard[rowIdx][colIdx] = activePlayerSymbol;
-      return updatedBoard;
-    });
-    onSelectSq();
+  let gameBoard = initialGameBoard;
+
+  for(const turn of turns){
+    const {square, player} = turn;
+    const {row, col} = square;
+
+    gameBoard[row][col] = player;
   }
+
+  // const [gameBoard, setGameBoard] = useState(initialGameBoard);
+
+  // function handleSelectSq(rowIdx, colIdx) {
+  //   setGameBoard((prevGameBoard) => {
+  //     const updatedBoard = [
+  //       ...prevGameBoard.map((innerArray) => [...innerArray]),
+  //     ];
+  //     updatedBoard[rowIdx][colIdx] = activePlayerSymbol;
+  //     return updatedBoard;
+  //   });
+  //   onSelectSq();
+  // }
 
   return (
     <>
@@ -29,10 +38,8 @@ export function GameBoard({ onSelectSq, activePlayerSymbol }) {
             <ol>
               {row.map((playerSymbol, colIdx) => (
                 <li key={colIdx}>
-                  <button
-                    className={style.playerSymbolBut}
-                    onClick={() => handleSelectSq(rowIdx, colIdx)}
-                  >
+                  <button onClick={()=> onSelectSq(rowIdx, colIdx)}
+                    className={style.playerSymbolBut} disabled={playerSymbol !== null}>
                     {playerSymbol}
                   </button>
                 </li>
