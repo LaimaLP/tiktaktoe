@@ -47,3 +47,25 @@ main{
   }
 
 
+.gameOver{
+  min-height: 500px;
+  min-width: 500px;
+  background-color: rgba(174, 144, 205, 0.869);
+  border: 3px solid rgb(61, 48, 61);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top:5%;
+  left:40%;
+  font-size: 2rem;
+
+}
+.gameOver button{
+  font-size: 1.5rem;
+  background-color: blueviolet;
+  padding: 10px;
+  border-radius: 0.5rem;
+}
