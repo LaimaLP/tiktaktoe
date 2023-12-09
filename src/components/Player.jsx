@@ -1,12 +1,12 @@
 import style from "./Header.module.css";
 import { useState } from "react";
 
-export function Player({ defaultName, symbol }) {
+export function Player({ defaultName, symbol, isActive }) {
     const [playerName, setPlayerName ] = useState(defaultName);
   const [edit, setEdit] = useState(false);
 
   function handleEdit() {
-    setEdit(!edit);
+    setEdit(edit => !edit);
   }
 
   function handleChange(ev){
@@ -21,7 +21,7 @@ export function Player({ defaultName, symbol }) {
   }
 
   return (
-    <li>
+    <li className={isActive? "active" : undefined}>
       <span className={style.player}>
         {inputPlayerName}
         <span className={style.playerSymbol}><b>{symbol}</b></span>

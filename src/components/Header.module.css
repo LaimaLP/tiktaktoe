@@ -36,14 +36,33 @@ ol {
 
 .playerSymbolBut {
     margin-left: 1rem;
-    font-size: 1rem;
     color: #e1dec7;
-    padding: 2rem;
+    padding: 1rem;
+    width: 80px;
+    height: 80px;
     cursor: pointer;
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+    border: none;
+    font-family:cursive;
+    text-align: center;
+      transition: color 0.2s;
+    /* width: 3rem;
+  
+    padding: 0.5rem 0.25rem; */
+    
   }
-  #players.higlight-payer li.active{
+  /* #players.higlight-payer li.active{
+    border-color: yellow;
+    animation: pusle 2s infinite ease-in-out;
+  }
 
-  }
+  
+  #players.higlight-payer li.active .playerName,
+  #players.higlight-payer li.active .playerSymbol{ 
+color: blue;
+  } */
 
 .player{
 
@@ -58,10 +77,18 @@ ol {
 input{
   padding: 5px;
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.2em;
+  background-color: rgba(134, 130, 127, 0.511);
+  border: none;
+  max-width: 150px;
+  color: rgb(99, 99, 100);
 }
 .playerSymbol{
   margin: 0 10px;
   color: rgb(60, 60, 60);
+
+}
+.playerSymbolBut{
+
 }

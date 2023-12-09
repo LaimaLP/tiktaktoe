@@ -37,3 +37,13 @@ main{
     gap: 80px;
     font-size: 2rem;
   }
+
+
+  .higlightPayer li.active{
+    background-color: rgba(42, 165, 118, 0.433);
+    border-radius: 0.8rem;
+    border: 2px solid rgb(3, 94, 3);
+    
+  }
+
+
