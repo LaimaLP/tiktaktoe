@@ -4,6 +4,7 @@ import "./App.css";
 import { GameBoard } from "./components/GameBoard";
 import { useState } from "react";
 import { Log } from "./components/Log";
+import GameOver from "./components/GameOver";
 import { WINNING_COMBINATIONS } from "./components/winningCombination";
 
 const initialGameBoard = [
@@ -50,6 +51,7 @@ for(const combination of WINNING_COMBINATIONS){
   }
 }
 
+const hasDraw = gemeTurns.length === 9 && !winner;
   function handleSelectSq(rowIdx, colIdx) {
     // setActivePlayer((curActivePlayer) => (curActivePlayer === "X" ? "O" : "X"));
 
@@ -82,7 +84,7 @@ for(const combination of WINNING_COMBINATIONS){
               isActive={activePlayer === "O"}
             />
           </ol>
-          {winner && <p>You won, {winner}! </p>}
+          {(winner || hasDraw )&& <GameOver winner={winner} />}
           <GameBoard
             onSelectSq={handleSelectSq} board={gameBoard}/>
         </div>

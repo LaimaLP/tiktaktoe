@@ -10,8 +10,8 @@ export function GameBoard({ onSelectSq, board }) {
             <ol>
               {row.map((playerSymbol, colIdx) => (
                 <li key={colIdx}>
-                  <button onClick={()=> onSelectSq(rowIdx, colIdx)}
-                    className={style.playerSymbolBut} disabled={playerSymbol !== null}>
+                  <button className={style.playerSymbolBut} 
+                  onClick={()=> onSelectSq(rowIdx, colIdx)} disabled={playerSymbol !== null}>
                     {playerSymbol}
                   </button>
                 </li>
