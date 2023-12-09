@@ -1,12 +1,11 @@
 import style from "./Header.module.css";
 
-
-export function GameBoard({ onSelectSq, turns }) {
+export function GameBoard({ onSelectSq, board }) {
 
   return (
     <>
       <ol className={style.gameBoard}>
-        {gameBoard.map((row, rowIdx) => (
+        {board.map((row, rowIdx) => (
           <li key={rowIdx}>
             <ol>
               {row.map((playerSymbol, colIdx) => (
