@@ -1,10 +1,9 @@
 .headerContainer{
-
     text-align: center;
+    font-size: 2rem;
+    font-family: fantasy;
 }
-
 .gameBoard{
- 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -12,10 +11,6 @@
     margin: 3rem 0;
     padding: 0;
     flex-direction: column;
-    
-
-    
-    
 }
 
 ol {
@@ -38,8 +33,10 @@ ol {
     margin-left: 1rem;
     color: #e1dec7;
     padding: 1rem;
-    width: 80px;
-    height: 80px;
+    min-width: 110px;
+    min-height: 110px;
+    /* max-width: 100px;
+    max-height: 100px; */
     cursor: pointer;
     color: black;
     font-weight: bold;
@@ -48,47 +45,33 @@ ol {
     font-family:cursive;
     text-align: center;
       transition: color 0.2s;
-    /* width: 3rem;
-  
-    padding: 0.5rem 0.25rem; */
-    
-  }
-  /* #players.higlight-payer li.active{
-    border-color: yellow;
-    animation: pusle 2s infinite ease-in-out;
   }
 
-  
-  #players.higlight-payer li.active .playerName,
-  #players.higlight-payer li.active .playerSymbol{ 
-color: blue;
-  } */
 
 .player{
-
- padding: 5px;
+ padding: 2px;
  margin-right: 20px;
  border-radius: 20px;
- color: rgba(21, 21, 22, 0.7);
+ color: rgb(240, 240, 245);
+ display: block;
 
+}
 
-
+.editBtn{
+  padding: 2px 15px;
+  border-radius: 10px;
+  box-shadow: 1px 2px 10px;
 }
 input{
-  padding: 5px;
   border-radius: 10px;
-  font-size: 1.5rem;
-  line-height: 1.2em;
-  background-color: rgba(134, 130, 127, 0.511);
+  font-size: 1.2rem;
+  background-color: rgba(52, 50, 47, 0.614);
   border: none;
-  max-width: 150px;
-  color: rgb(99, 99, 100);
+width: 120px;
+  color: rgb(159, 159, 170);
+
 }
 .playerSymbol{
-  margin: 0 10px;
-  color: rgb(60, 60, 60);
-
-}
-.playerSymbolBut{
-
+  margin-left: 15px;
+  color: rgb(186, 181, 181);
 }
