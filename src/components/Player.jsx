@@ -24,12 +24,12 @@ export function Player({ defaultName, symbol, isActive, onChangeName }) {
   }
 
   return (
-    <li className={isActive? "active" : undefined}>
+    <li id="playerInfoContainer" className={isActive? "active" : undefined}>
       <span className={style.player}>
         {inputPlayerName}
         <span className={style.playerSymbol}><b>{symbol}</b></span>
       </span>
-      <button onClick={handleEdit}> {edit? "Save" : "Edit"} </button>
+      <button className={style.editBtn} onClick={handleEdit}> {edit? "Save" : "Edit"} </button>
     </li>
   );
 }
