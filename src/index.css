@@ -61,8 +61,8 @@ main{
 
 
 .gameOver{
-  min-height: 850px;
-  min-width: 800px;
+  height: 660px;
+  width: 600px;
   background-color: rgba(174, 144, 205, 0.956);
   border: 10px outset rgb(61, 48, 61);
   animation: infinite;
