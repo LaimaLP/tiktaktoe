@@ -87,7 +87,7 @@ function handlePlayerNameChnage(symbol, newName){
 }
   return (
     <main>
-      <div className="style.gameContainer">
+      <div className="gameContainer">
         <Header />
         <div className="playerInfoGameBoard">
           <ol id="players" className="higlightPayer">

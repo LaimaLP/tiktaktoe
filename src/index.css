@@ -22,9 +22,12 @@ main{
   justify-content: center;
 }
 
+
 .playerInfoGameBoard{
   max-width: 40%;
   min-width: 500px;
+  max-height: 80%;
+  height: 530px;
   border: 5px outset rgb(90, 87, 87);
   display: flex;
   justify-content: center;
@@ -87,4 +90,7 @@ left:30%;
 }
 #log{
   display: none;
+}
+h1{
+  margin:1rem;
 }
