@@ -1,5 +1,5 @@
-Tic-tac-toe game created with React.
-
+Tic-tac-toe game created with React. 
+Try game there: https://laimalp.github.io/tiktaktoe/
 ![This app img](image.png)
 
 🌟 About
