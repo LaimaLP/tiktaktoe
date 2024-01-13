@@ -60,23 +60,24 @@ main{
   }
 
 
-.gameOver{
-  height: 660px;
-  width: 600px;
-  background-color: rgba(174, 144, 205, 0.956);
-  border: 10px outset rgb(61, 48, 61);
-  animation: infinite;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-top: 5%;
-left:30%;
-  font-size: 3rem;
+  .gameOver {
+    max-width: 40%;
+    min-width: 550px;
+    height: 580px;
+    background-color: rgba(174, 144, 205, 0.956);
+    border: 10px outset rgb(61, 48, 61);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
 
-}
+  }
 .gameOver p{
   font-weight: bold;
 }
